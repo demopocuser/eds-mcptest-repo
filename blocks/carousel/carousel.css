@@ -1,26 +1,46 @@
-/* Carousel Block Styles - Based on Eicher Design */
+/* Carousel Block Styles - Matching Eicher Design */
+
+/* Remove default wrapper constraints */
+.carousel-container {
+  margin: 0;
+}
+
 .carousel-container .carousel-wrapper {
   max-width: unset;
   padding: 0;
+  margin: 0;
 }
 
+/* Main carousel container */
 .carousel {
   position: relative;
   width: 100%;
+  min-height: 100vh;
   overflow: hidden;
   background-color: #000;
 }
 
+/* Slides container */
 .carousel-slides {
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 100vh;
+  min-height: 500px;
 }
 
+/* Individual slide */
 .carousel-slide {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-slide[style*="display: block"] {
+  opacity: 1;
 }
 
 .carousel-slide picture,
@@ -31,65 +51,83 @@
   display: block;
 }
 
-/* Navigation Buttons */
+/* Navigation container */
 .carousel-nav {
   position: absolute;
-  bottom: 20px;
-  right: 20px;
-  z-index: 10;
+  bottom: 16px;
+  right: 16px;
+  z-index: 100;
   display: flex;
-  gap: 10px;
+  gap: 4px;
+  align-items: center;
 }
 
+/* Navigation buttons - exact Eicher style */
 .carousel-nav-button {
-  background-color: #c41e3a;
-  color: white;
+  background-color: #d32f2f;
+  color: #fff;
   border: none;
-  width: 40px;
-  height: 40px;
-  font-size: 20px;
+  width: 36px;
+  height: 36px;
+  font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.3s ease;
+  transition: all 0.2s ease;
   padding: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .carousel-nav-button:hover {
-  background-color: #a01729;
+  background-color: #b71c1c;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 .carousel-nav-button:active {
-  background-color: #8a1423;
+  background-color: #8b0000;
+  transform: scale(0.95);
 }
 
 .carousel-nav-button:focus {
-  outline: 2px solid white;
+  outline: 2px solid #fff;
   outline-offset: 2px;
 }
 
-/* Tablet and Desktop */
+/* Tablet */
 @media (min-width: 768px) {
-  .carousel-slides {
-    height: 600px;
-  }
-
   .carousel-nav {
-    bottom: 30px;
-    right: 30px;
+    bottom: 24px;
+    right: 24px;
+    gap: 6px;
   }
 
   .carousel-nav-button {
-    width: 50px;
-    height: 50px;
-    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
   }
 }
 
-/* Large Desktop */
-@media (min-width: 1200px) {
-  .carousel-slides {
-    height: 700px;
+/* Desktop */
+@media (min-width: 1024px) {
+  .carousel-nav {
+    bottom: 32px;
+    right: 32px;
+    gap: 8px;
+  }
+
+  .carousel-nav-button {
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+  }
+}
+
+/* Accessibility: reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .carousel-slide {
+    transition: none;
   }
 }
