@@ -1,0 +1,20 @@
+.hero-banner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.hero-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  max-height: 400px;
+}
+
+@media (max-width: 768px) {
+  .hero-banner img {
+    max-height: 300px;
+  }
+}

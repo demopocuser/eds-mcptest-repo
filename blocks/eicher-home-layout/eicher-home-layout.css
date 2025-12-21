@@ -1,0 +1,159 @@
+.eicher-home-layout {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.eicher-home-layout > div {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+/* Company Info Sidebar */
+.company-info {
+  flex: 0 0 280px;
+  background-color: rgb(227, 33, 25);
+  color: rgb(255, 255, 255);
+  padding: 40px 30px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.company-info p {
+  margin: 0 0 20px 0;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.company-info p:last-child {
+  margin-bottom: 0;
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.company-info .report-button {
+  display: inline-block;
+  background-color: transparent;
+  border: 2px solid rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  padding: 8px 6px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.company-info .report-button:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(227, 33, 25);
+}
+
+/* Product Cards Container */
+.product-cards {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.product-card {
+  background-color: white;
+  padding: 35px 40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-card h2 {
+  font-size: 19px;
+  font-weight: 400;
+  color: rgb(109, 110, 113);
+  margin: 0 0 18px 0;
+  text-transform: uppercase;
+  letter-spacing: normal;
+}
+
+.product-card p {
+  margin: 0 0 15px 0;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555;
+}
+
+.product-card p:last-child {
+  margin-bottom: 0;
+}
+
+.product-card .card-link {
+  color: rgb(227, 33, 25);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  margin-right: 20px;
+  transition: color 0.3s ease;
+  position: relative;
+  padding-right: 18px;
+}
+
+.product-card .card-link::after {
+  content: '›';
+  position: absolute;
+  right: 0;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.product-card .card-link:hover {
+  color: rgb(176, 26, 31);
+}
+
+.product-card .card-link:hover::after {
+  transform: translateX(3px);
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .eicher-home-layout > div {
+    flex-direction: column;
+  }
+  
+  .company-info {
+    flex: 1;
+    width: 100%;
+    min-height: auto;
+  }
+  
+  .product-cards {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .eicher-home-layout {
+    margin: 20px auto;
+    padding: 0 15px;
+  }
+  
+  .company-info {
+    padding: 30px 20px;
+  }
+  
+  .product-card {
+    padding: 25px 20px;
+  }
+  
+  .product-card h2 {
+    font-size: 18px;
+  }
+  
+  .product-card p {
+    font-size: 14px;
+  }
+}
