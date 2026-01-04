@@ -1,0 +1,81 @@
+.contact-cta {
+  background: linear-gradient(135deg, rgb(40, 30, 50) 0%, rgb(60, 45, 70) 100%);
+  color: rgb(255, 255, 255);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.contact-cta .cta-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  margin-bottom: 16px;
+  opacity: 0.8;
+}
+
+.contact-cta .cta-heading {
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 60px;
+  color: rgb(255, 255, 255);
+  margin: 0 0 16px;
+}
+
+.contact-cta .cta-description {
+  font-size: 18px;
+  line-height: 28px;
+  color: rgb(255, 255, 255);
+  margin: 0 0 48px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-cta .career-text {
+  font-size: 16px;
+  line-height: 24px;
+  color: rgb(255, 255, 255);
+  margin: 0 0 16px;
+  opacity: 0.9;
+}
+
+.contact-cta .career-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: rgb(255, 100, 46);
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: gap 0.3s ease;
+}
+
+.contact-cta .career-link:hover {
+  gap: 12px;
+}
+
+.contact-cta .career-link svg {
+  transition: transform 0.3s ease;
+}
+
+.contact-cta .career-link:hover svg {
+  transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+  .contact-cta {
+    padding: 60px 20px;
+  }
+
+  .contact-cta .cta-heading {
+    font-size: 36px;
+    line-height: 48px;
+  }
+
+  .contact-cta .cta-description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

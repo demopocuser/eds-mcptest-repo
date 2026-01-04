@@ -1,0 +1,112 @@
+.experts-grid {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.experts-grid .section-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgb(19, 19, 19);
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.experts-grid .section-heading {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 52px;
+  color: rgb(19, 19, 19);
+  margin: 0 0 16px;
+  text-align: center;
+}
+
+.experts-grid .section-description {
+  font-size: 16px;
+  line-height: 26px;
+  color: rgb(19, 19, 19);
+  margin: 0 auto 48px;
+  max-width: 700px;
+  text-align: center;
+}
+
+.experts-grid .experts-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.experts-grid .expert-card {
+  text-decoration: none;
+  color: rgb(19, 19, 19);
+  transition: transform 0.3s ease;
+}
+
+.experts-grid .expert-card:hover {
+  transform: translateY(-4px);
+}
+
+.experts-grid .expert-image {
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.experts-grid .expert-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.experts-grid .expert-card:hover .expert-image img {
+  transform: scale(1.05);
+}
+
+.experts-grid .expert-info h5 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  margin: 0 0 8px;
+  color: rgb(19, 19, 19);
+}
+
+.experts-grid .expert-info .expert-title {
+  font-size: 14px;
+  line-height: 20px;
+  color: rgb(107, 114, 128);
+  margin: 0 0 4px;
+}
+
+.experts-grid .expert-info .expert-location {
+  font-size: 14px;
+  line-height: 20px;
+  color: rgb(107, 114, 128);
+  margin: 0;
+}
+
+@media (max-width: 968px) {
+  .experts-grid .experts-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .experts-grid {
+    padding: 60px 20px;
+  }
+
+  .experts-grid .section-heading {
+    font-size: 32px;
+    line-height: 42px;
+  }
+}
+
+@media (max-width: 640px) {
+  .experts-grid .experts-container {
+    grid-template-columns: 1fr;
+  }
+}

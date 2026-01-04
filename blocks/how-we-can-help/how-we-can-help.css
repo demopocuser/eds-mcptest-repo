@@ -1,0 +1,68 @@
+.how-we-can-help {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.how-we-can-help .help-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.how-we-can-help .section-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgb(19, 19, 19);
+  margin-bottom: 24px;
+}
+
+.how-we-can-help .section-heading {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 52px;
+  color: rgb(19, 19, 19);
+  margin: 0 0 24px;
+}
+
+.how-we-can-help .text-column p {
+  font-size: 16px;
+  line-height: 26px;
+  color: rgb(19, 19, 19);
+  margin: 0 0 16px;
+}
+
+.how-we-can-help .text-column a {
+  color: rgb(255, 100, 46);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.how-we-can-help .text-column a:hover {
+  text-decoration: underline;
+}
+
+.how-we-can-help .image-column img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+@media (max-width: 968px) {
+  .how-we-can-help .help-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .how-we-can-help {
+    padding: 60px 20px;
+  }
+
+  .how-we-can-help .section-heading {
+    font-size: 32px;
+    line-height: 42px;
+  }
+}
